@@ -1,0 +1,51 @@
+<!--pages/new/add.wxml-->
+<form id='body' style='height: 100%; background-color: #efefef;' bindsubmit='formSubmit'>
+	<input name='id' value='{{voteid}}' style='display: none'></input>
+	<view id='content' style='background-color: white; margin-bottom: 20rpx;'>
+		<view style='margin: 40rpx;'>
+			<view id='title' style='border-bottom: solid grey 1rpx;'>
+				<input name='title' placeholder='投票标题'></input>
+			</view>
+			<view style='margin: 20rpx 0rpx; border-bottom: solid grey 1rpx;'>
+				<input name='describe' placeholder='补充描述(选填)'></input>
+			</view>
+			<view id='selections'>
+				<view wx:for='{{ selections }}' wx:key='item.unique'>
+					<template is='selection' data='{{...item}}'/>
+				</view>
+				<template is='addselection'/>
+			</view>
+		</view>
+	</view>
+	<view id='deadline' style='background-color: white; margin-bottom: 40rpx;'>
+		<view style='padding: 20rpx 0rpx; margin: 0rpx 40rpx; border-bottom: solid grey 1rpx;'>
+			<label class='picker'>截止时间</label>
+			<view class='picker'>
+				<picker class='picker' name='duedate' mode="date" value="{{date}}" 
+				start="{{date}}" bindchange="bindDateChange">{{date}}</picker>
+				<picker class='picker' name='deadline' mode="time" value="{{time}}" 
+				start="{{time}}" bindchange="bindTimeChange">{{time}}</picker>
+			</view>
+		</view>
+		<view style='padding: 20rpx 0rpx; margin: 0rpx 40rpx;'>
+			<label>匿名投票</label>
+			<switch name='noname' style='float: right;'></switch>
+		</view>
+	</view>
+	<view class='button-area'>
+		<button class='completeButton' formType='submit'>完成</button>
+	</view>
+</form>
+<template name='selection'>
+	<view>
+		<button class='deleteButton' bindtap='deleteSelection' data-unique='{{unique}}'>-</button>
+		<input name='selection_{{unique}}' value='{{value}}' class='selection' placeholder='选项'
+				data-unique='{{unique}}' bindblur='changeSelectionName'>{{value}}</input>
+	</view>
+</template>
+<template name='addselection'>
+	<view style='vertical-align: center;'>
+		<button class='addButton' bindtap='addSelection'>+</button>
+		<label style='color: blue; vertical-align: middle;'>添加选项</label>
+	</view>
+</template>

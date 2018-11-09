@@ -1,0 +1,32 @@
+{
+	"pages": [
+		"pages/new/toadd",
+		"pages/new/add",
+		"pages/my/index",
+		"pages/my/mod",
+		"pages/my/list",
+		"pages/my/detail"
+	],
+	"window": {
+		"navigationBarBackgroundColor": "#ffffff",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "投票票",
+		"backgroundColor": "grey",
+		"backgroundTextStyle": "light",
+		"enablePullDownRefresh": false
+	},
+	"tabBar": {
+		"list": [{
+			"pagePath": "pages/new/toadd",
+			"text": "新建",
+			"iconPath": "images/new_nofocus.png",
+			"selectedIconPath": "images/new.png"
+		},
+		{
+			"pagePath": "pages/my/list",
+			"text": "我的",
+			"iconPath": "images/votes_nofocus.png",
+			"selectedIconPath": "images/votes.png"
+		}]
+	}
+}

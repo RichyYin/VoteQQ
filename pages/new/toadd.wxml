@@ -1,0 +1,9 @@
+<!--pages/new/toadd.wxml-->
+<view class='selection'>
+	<image src='/images/single.png'></image>
+</view>
+<button bind:tap='addSingleSelection'>单选投票</button>
+<view class='selection'>
+	<image src='/images/multiple.png'></image>
+</view>
+<button bind:tap='addMultifulSelection'>多选投票</button>

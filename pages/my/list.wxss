@@ -1,0 +1,8 @@
+/* pages/my/list.wxss */
+.selection_list {
+	display: block; padding: 20rpx; 
+	background-color: #efefef; border-bottom: solid 1rpx white;
+}
+.toolbarView {
+	display: flex; padding: 5rpx; background-color: #efefef; border-bottom: solid 1rpx white;
+}

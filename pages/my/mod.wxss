@@ -1,0 +1,24 @@
+/* pages/my/mod.wxss */
+.deleteButton, .addButton {
+	width: 50rpx; height: 50rpx; display: inline-block;
+	line-height: 50rpx; text-align: center; vertical-align: middle;
+	padding: 0rpx; margin: 20rpx; color: white;
+}
+.deleteButton {
+	background-color: red;
+}
+.addButton {
+	background-color: blue;
+}
+.completeButton {
+	width: 90%; color: white; background-color: blue; vertical-align: bottom;
+}
+.selection {
+	display: inline-block; border-bottom: solid grey 1rpx; vertical-align: middle;
+}
+picker.picker {
+	display: inline-block; vertical-align: middle; text-align: center; padding-left: 20rpx;
+}
+view.picker {
+	float: right;
+}

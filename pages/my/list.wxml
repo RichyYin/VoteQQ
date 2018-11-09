@@ -1,0 +1,16 @@
+<!--pages/my/list.wxml-->
+<view wx:for='{{ votes }}' wx:key=''>
+	<label class='selection_list' bindtap='tapList'
+		data-voteid='{{ item.voteId }}'>{{ item.voteTitle }}</label>
+	<view wx:if='{{ showToolbar == item.voteId }}'>
+		<template is='toolbar' data='{{...item}}'/>
+	</view>
+</view>
+
+<template name='toolbar'>
+	<view class='toolbarView'>
+		<button bindtap='viewVote' data-voteid='{{ voteId }}'>查看</button>
+		<button bindtap='modifyVote' data-voteid='{{ voteId }}'>编辑</button>
+		<button bindtap='deleteVote' data-voteid='{{ voteId }}'>删除</button>
+	</view>
+</template>

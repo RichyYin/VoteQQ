@@ -1,0 +1,10 @@
+/* pages/new/toadd.wxss */
+.selection {
+	height: 300rpx; text-align: center; vertical-align: middle; margin-top: 60rpx;
+}
+image {
+	height: 300rpx; width: 300rpx;
+}
+button {
+	width: 400rpx; margin-top: 40rpx; background-color: rgba(7, 90, 245, 0.904); color: white;
+}

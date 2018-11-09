@@ -1,0 +1,25 @@
+/* pages/my/detail.wxss */
+.body {
+	margin: 40rpx;
+}
+.title {
+	display: block; font-weight: bolder; font-size: 50rpx;
+} 
+.desc {
+	display: block; color: #cfcfcf;
+}
+.selection {
+	margin: 40rpx 0rpx 10rpx 0rpx; padding: 20rpx; background-color: #efefef;
+}
+.count {
+	float: right;
+}
+.dueDate {
+	font-size: 20rpx; color: #cfcfcf;
+}
+.voter {
+	height: 80rpx; width: 80rpx;
+}
+.voterAvatar {
+	border-radius: 50%;
+}

@@ -1,0 +1,29 @@
+<!--pages/my/detail.wxml-->
+<view class='body'>
+	<view class='section_info'>
+		<label class='title'>{{ vote.voteTitle }}</label>
+		<label class='desc'>{{ vote.voteDescribe }}</label>
+	</view>
+	<view class='section_selections'>
+		<view wx:for='{{ vote.voteSelection }}' wx:key=''>
+			<view class='selection' data-unique='{{ item.unique }}' bindtap='switchVote'>
+				<label>{{ item.value }}</label>
+				<view class='count'>
+					<label>{{ item.voter.length }}票</label>
+					<label style='padding-left: 30rpx;'>{{ voters.length == 0 ? 0 : (item.voter.length / voters.length)*100 }}%</label>
+				</view>
+			</view>
+			<view wx:if='{{ !vote.voteNoName }}'>
+				<view wx:for='{{ item.voter }}' wx:key=''>
+					<view class='voter'>
+						<open-data type="userAvatarUrl" class="voterAvatar"></open-data>
+						<!-- <open-data type="userNickName"></open-data> -->
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class='section_bottom'>
+		<label class='dueDate'>投票截止： {{ vote.voteDueDate }}</label>
+	</view>
+</view>
